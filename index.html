@@ -483,6 +483,15 @@ function handleLogin() {
   }
 }
 
+document.addEventListener("keydown", function (e) {
+  const loginVisible =
+    document.getElementById("loginPage").style.display !== "none";
+
+  if (loginVisible && e.key === "Enter") {
+    handleLogin();
+  }
+});
+
 // PAGNATION
 let currentPage = 1;
 let rowsPerPage = 10;
